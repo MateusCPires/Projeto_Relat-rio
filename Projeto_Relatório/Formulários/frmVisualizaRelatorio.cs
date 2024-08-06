@@ -16,5 +16,21 @@ namespace Projeto_Relatório.Formulários
         {
             InitializeComponent();
         }
+
+        private void seriesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.seriesBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dataSet_Series);
+
+        }
+
+        private void seriesBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.seriesBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dataSet_Series);
+
+        }
     }
 }
