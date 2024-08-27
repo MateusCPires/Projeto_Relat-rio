@@ -23,5 +23,9 @@ namespace Projeto_Relatório
             objVisualizaSeries.MdiParent = this;
             objVisualizaSeries.Show();
         }
+
+        private void visualizarRelatórioAgrupadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
     }
 }
