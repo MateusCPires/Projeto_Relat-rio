@@ -81,6 +81,12 @@
     <Compile Include="Formulários\frmVisualizaSeriesAgrupadas.Designer.cs">
       <DependentUpon>frmVisualizaSeriesAgrupadas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formulários\frmVisualizaSeriesFiltradas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frmVisualizaSeriesFiltradas.Designer.cs">
+      <DependentUpon>frmVisualizaSeriesFiltradas.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formulários\frmVisualizaSeriesAgrupadas.resx">
       <DependentUpon>frmVisualizaSeriesAgrupadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frmVisualizaSeriesFiltradas.resx">
+      <DependentUpon>frmVisualizaSeriesFiltradas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
@@ -109,6 +118,7 @@
     </Compile>
     <EmbeddedResource Include="Relatórios\Relatorio_Series.rdlc" />
     <EmbeddedResource Include="Relatórios\Relatorio_Series_Agrupado.rdlc" />
+    <EmbeddedResource Include="Relatórios\Relatorio_Series_Filtrado.rdlc" />
     <None Include="Dados\DataSet_Series.xsc">
       <DependentUpon>DataSet_Series.xsd</DependentUpon>
     </None>

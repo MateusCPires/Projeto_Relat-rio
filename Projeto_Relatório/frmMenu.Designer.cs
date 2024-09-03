@@ -31,6 +31,8 @@ namespace Projeto_Relatório
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.VisualizarRelatórioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.visualizarRelatórioAgrupadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vilualizarRelatórioComFiltrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -39,7 +41,9 @@ namespace Projeto_Relatório
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.VisualizarRelatórioToolStripMenuItem});
+            this.VisualizarRelatórioToolStripMenuItem,
+            this.visualizarRelatórioAgrupadoToolStripMenuItem,
+            this.vilualizarRelatórioComFiltrosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 33);
@@ -52,6 +56,19 @@ namespace Projeto_Relatório
             this.VisualizarRelatórioToolStripMenuItem.Size = new System.Drawing.Size(176, 29);
             this.VisualizarRelatórioToolStripMenuItem.Text = "Visualizar Relatório";
             this.VisualizarRelatórioToolStripMenuItem.Click += new System.EventHandler(this.VisualizarRelatórioToolStripMenuItem_Click);
+            // 
+            // visualizarRelatórioAgrupadoToolStripMenuItem
+            // 
+            this.visualizarRelatórioAgrupadoToolStripMenuItem.Name = "visualizarRelatórioAgrupadoToolStripMenuItem";
+            this.visualizarRelatórioAgrupadoToolStripMenuItem.Size = new System.Drawing.Size(262, 29);
+            this.visualizarRelatórioAgrupadoToolStripMenuItem.Text = "Visualizar Relatório Agrupado";
+            // 
+            // vilualizarRelatórioComFiltrosToolStripMenuItem
+            // 
+            this.vilualizarRelatórioComFiltrosToolStripMenuItem.Name = "vilualizarRelatórioComFiltrosToolStripMenuItem";
+            this.vilualizarRelatórioComFiltrosToolStripMenuItem.Size = new System.Drawing.Size(265, 29);
+            this.vilualizarRelatórioComFiltrosToolStripMenuItem.Text = "Vilualizar Relatório com Filtros";
+            this.vilualizarRelatórioComFiltrosToolStripMenuItem.Click += new System.EventHandler(this.vilualizarRelatórioComFiltrosToolStripMenuItem_Click);
             // 
             // frmMenu
             // 
@@ -74,5 +91,7 @@ namespace Projeto_Relatório
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem VisualizarRelatórioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem visualizarRelatórioAgrupadoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem vilualizarRelatórioComFiltrosToolStripMenuItem;
     }
 }

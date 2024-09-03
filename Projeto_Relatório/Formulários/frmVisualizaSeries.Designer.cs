@@ -54,10 +54,10 @@ namespace Projeto_Relatório
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet_Series_AgruClassificacao";
+            reportDataSource1.Name = "Dados_Series";
             reportDataSource1.Value = this.seriesBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Projeto_Relatório.Relatórios.Relatorio_Series_Agrupado.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Projeto_Relatório.Relatórios.Relatorio_Series.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projeto_Relatório.Formulários;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,6 +27,16 @@ namespace Projeto_Relatório
 
         private void visualizarRelatórioAgrupadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frmVisualizaSeriesAgrupadas objVisualizaSeriesAgrupadas = new frmVisualizaSeriesAgrupadas();
+            objVisualizaSeriesAgrupadas.MdiParent = this;
+            objVisualizaSeriesAgrupadas.Show();
+        }
+
+        private void vilualizarRelatórioComFiltrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmVisualizaSeriesFiltradas objVisualizaSeriesFiltradas = new frmVisualizaSeriesFiltradas();
+            objVisualizaSeriesFiltradas.MdiParent = this;
+            objVisualizaSeriesFiltradas.Show();
         }
     }
 }

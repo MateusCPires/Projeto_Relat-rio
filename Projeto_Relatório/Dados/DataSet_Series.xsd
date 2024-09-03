@@ -85,6 +85,33 @@ SELECT ID_SERIES, NOME, DESCRICAO, CLASSIFICACAO, NOTAS, DATALANCAMENTO, ID_CATE
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ClassificacaoEtaria_SeriesTableAdapter" GeneratorDataComponentClassName="ClassificacaoEtaria_SeriesTableAdapter" Name="ClassificacaoEtaria_Series" UserDataComponentName="ClassificacaoEtaria_SeriesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="db_230273.dbo.Series" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DISTINCT CLASSIFICACAO
+FROM   Series</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CLASSIFICACAO" DataSetColumn="CLASSIFICACAO" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="db_230273.dbo.Series" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT DISTINCT CLASSIFICACAO
+FROM   Series</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -121,6 +148,19 @@ SELECT ID_SERIES, NOME, DESCRICAO, CLASSIFICACAO, NOTAS, DATALANCAMENTO, ID_CATE
               <xs:element name="NOTAS" msprop:Generator_ColumnVarNameInTable="columnNOTAS" msprop:Generator_ColumnPropNameInRow="NOTAS" msprop:Generator_ColumnPropNameInTable="NOTASColumn" msprop:Generator_UserColumnName="NOTAS" type="xs:float" minOccurs="0" />
               <xs:element name="DATALANCAMENTO" msprop:Generator_ColumnVarNameInTable="columnDATALANCAMENTO" msprop:Generator_ColumnPropNameInRow="DATALANCAMENTO" msprop:Generator_ColumnPropNameInTable="DATALANCAMENTOColumn" msprop:Generator_UserColumnName="DATALANCAMENTO" type="xs:dateTime" minOccurs="0" />
               <xs:element name="ID_CATEGORIA" msprop:Generator_ColumnVarNameInTable="columnID_CATEGORIA" msprop:Generator_ColumnPropNameInRow="ID_CATEGORIA" msprop:Generator_ColumnPropNameInTable="ID_CATEGORIAColumn" msprop:Generator_UserColumnName="ID_CATEGORIA" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ClassificacaoEtaria_Series" msprop:Generator_TableClassName="ClassificacaoEtaria_SeriesDataTable" msprop:Generator_TableVarName="tableClassificacaoEtaria_Series" msprop:Generator_RowChangedName="ClassificacaoEtaria_SeriesRowChanged" msprop:Generator_TablePropName="ClassificacaoEtaria_Series" msprop:Generator_RowDeletingName="ClassificacaoEtaria_SeriesRowDeleting" msprop:Generator_RowChangingName="ClassificacaoEtaria_SeriesRowChanging" msprop:Generator_RowEvHandlerName="ClassificacaoEtaria_SeriesRowChangeEventHandler" msprop:Generator_RowDeletedName="ClassificacaoEtaria_SeriesRowDeleted" msprop:Generator_RowClassName="ClassificacaoEtaria_SeriesRow" msprop:Generator_UserTableName="ClassificacaoEtaria_Series" msprop:Generator_RowEvArgName="ClassificacaoEtaria_SeriesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CLASSIFICACAO" msprop:Generator_ColumnVarNameInTable="columnCLASSIFICACAO" msprop:Generator_ColumnPropNameInRow="CLASSIFICACAO" msprop:Generator_ColumnPropNameInTable="CLASSIFICACAOColumn" msprop:Generator_UserColumnName="CLASSIFICACAO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>

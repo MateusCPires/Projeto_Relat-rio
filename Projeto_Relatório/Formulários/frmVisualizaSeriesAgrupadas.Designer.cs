@@ -31,14 +31,24 @@ namespace Projeto_Relatório.Formulários
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dataSet_Series = new Projeto_Relatório.Dados.DataSet_Series();
-            this.dataSetSeriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.SeriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet_Series = new Projeto_Relatório.Dados.DataSet_Series();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.dataSetSeriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.SeriesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_Series)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetSeriesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SeriesBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // SeriesBindingSource
+            // 
+            this.SeriesBindingSource.DataMember = "Series";
+            this.SeriesBindingSource.DataSource = this.dataSet_Series;
+            // 
+            // dataSet_Series
+            // 
+            this.dataSet_Series.DataSetName = "DataSet_Series";
+            this.dataSet_Series.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -53,20 +63,10 @@ namespace Projeto_Relatório.Formulários
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 1;
             // 
-            // dataSet_Series
-            // 
-            this.dataSet_Series.DataSetName = "DataSet_Series";
-            this.dataSet_Series.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // dataSetSeriesBindingSource
             // 
             this.dataSetSeriesBindingSource.DataSource = this.dataSet_Series;
             this.dataSetSeriesBindingSource.Position = 0;
-            // 
-            // SeriesBindingSource
-            // 
-            this.SeriesBindingSource.DataMember = "Series";
-            this.SeriesBindingSource.DataSource = this.dataSet_Series;
             // 
             // frmVisualizaSeriesAgrupadas
             // 
@@ -77,9 +77,9 @@ namespace Projeto_Relatório.Formulários
             this.Name = "frmVisualizaSeriesAgrupadas";
             this.Text = "frmVisualizaSeriesAgrupadas";
             this.Load += new System.EventHandler(this.frmVisualizaSeriesAgrupadas_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.SeriesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_Series)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetSeriesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SeriesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
