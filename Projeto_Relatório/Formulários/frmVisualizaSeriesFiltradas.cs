@@ -21,6 +21,8 @@ namespace Projeto_Relatório.Formulários
         {
             // TODO: esta linha de código carrega dados na tabela 'dataSet_Series.ClassificacaoEtaria_Series'. Você pode movê-la ou removê-la conforme necessário.
             this.classificacaoEtaria_SeriesTableAdapter.Fill(this.dataSet_Series.ClassificacaoEtaria_Series);
+            // TODO: esta linha de código carrega dados na tabela 'dataSet_Series.Series'. Você pode movê-la ou removê-la conforme necessário.
+            this.seriesTableAdapter.Fill(this.dataSet_Series.Series);
 
             this.reportViewer2.RefreshReport();
         }
@@ -36,6 +38,18 @@ namespace Projeto_Relatório.Formulários
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
 
+        }
+
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+            this.reportViewer2.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("Classificacao", cmbClassificacao.Text));
+            this.reportViewer2.RefreshReport();
+        }
+
+        private void btnTodos_Click(object sender, EventArgs e)
+        {
+            this.reportViewer2.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("Classificacao", (string)null));
+            this.reportViewer2.RefreshReport();
         }
     }
 }

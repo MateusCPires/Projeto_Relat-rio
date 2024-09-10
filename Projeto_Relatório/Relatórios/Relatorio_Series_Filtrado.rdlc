@@ -562,11 +562,11 @@
             <DataSetName>DataSetSeriesFiltradas</DataSetName>
             <Filters>
               <Filter>
-                <FilterExpression>=iif(IsNothing(Parameters!ClassificacaoEtaria.Value), true,
-Fields!CLASSIFICACAO.Value = Parameters!ClassificacaoEtaria.Value)</FilterExpression>
+                <FilterExpression>=iif(IsNothing(Parameters!Classificacao.Value), true,
+Fields!CLASSIFICACAO.Value = Parameters!Classificacao.Value)</FilterExpression>
                 <Operator>Equal</Operator>
                 <FilterValues>
-                  <FilterValue>=true</FilterValue>
+                  <FilterValue DataType="Boolean">true</FilterValue>
                 </FilterValues>
               </Filter>
             </Filters>
@@ -632,9 +632,9 @@ Fields!CLASSIFICACAO.Value = Parameters!ClassificacaoEtaria.Value)</FilterExpres
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=iif(IsNothing(Parameters!ClassificacaoEtaria.Value),
+                      <Value>=iif(IsNothing(Parameters!Classificacao.Value),
 "Todas",
-Parameters!ClassificacaoEtaria.Value)</Value>
+Parameters!Classificacao.Value)</Value>
                       <Style />
                     </TextRun>
                   </TextRuns>
@@ -691,7 +691,7 @@ Parameters!ClassificacaoEtaria.Value)</Value>
     </ReportSection>
   </ReportSections>
   <ReportParameters>
-    <ReportParameter Name="ClassificacaoEtaria">
+    <ReportParameter Name="Classificacao">
       <DataType>String</DataType>
       <Nullable>true</Nullable>
       <AllowBlank>true</AllowBlank>
@@ -700,13 +700,13 @@ Parameters!ClassificacaoEtaria.Value)</Value>
   </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
-      <NumberOfColumns>4</NumberOfColumns>
-      <NumberOfRows>2</NumberOfRows>
+      <NumberOfColumns>1</NumberOfColumns>
+      <NumberOfRows>1</NumberOfRows>
       <CellDefinitions>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>0</RowIndex>
-          <ParameterName>ClassificacaoEtaria</ParameterName>
+          <ParameterName>Classificacao</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>

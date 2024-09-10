@@ -21,22 +21,25 @@ namespace Projeto_Relatório
         private void VisualizarRelatórioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmVisualizaSeries objVisualizaSeries = new frmVisualizaSeries();
-            objVisualizaSeries.MdiParent = this;
             objVisualizaSeries.Show();
         }
 
         private void visualizarRelatórioAgrupadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmVisualizaSeriesAgrupadas objVisualizaSeriesAgrupadas = new frmVisualizaSeriesAgrupadas();
-            objVisualizaSeriesAgrupadas.MdiParent = this;
             objVisualizaSeriesAgrupadas.Show();
         }
 
         private void vilualizarRelatórioComFiltrosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmVisualizaSeriesFiltradas objVisualizaSeriesFiltradas = new frmVisualizaSeriesFiltradas();
-            objVisualizaSeriesFiltradas.MdiParent = this;
             objVisualizaSeriesFiltradas.Show();
+        }
+
+        private void relatórioFiltradoPorPopupToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmInformaParametros objInformaParametros = new frmInformaParametros();
+            objInformaParametros.Show();
         }
     }
 }

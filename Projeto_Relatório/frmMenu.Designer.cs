@@ -33,6 +33,7 @@ namespace Projeto_Relatório
             this.VisualizarRelatórioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.visualizarRelatórioAgrupadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vilualizarRelatórioComFiltrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatórioFiltradoPorPopupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,38 +44,46 @@ namespace Projeto_Relatório
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.VisualizarRelatórioToolStripMenuItem,
             this.visualizarRelatórioAgrupadoToolStripMenuItem,
-            this.vilualizarRelatórioComFiltrosToolStripMenuItem});
+            this.vilualizarRelatórioComFiltrosToolStripMenuItem,
+            this.relatórioFiltradoPorPopupToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(804, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // VisualizarRelatórioToolStripMenuItem
             // 
             this.VisualizarRelatórioToolStripMenuItem.Name = "VisualizarRelatórioToolStripMenuItem";
-            this.VisualizarRelatórioToolStripMenuItem.Size = new System.Drawing.Size(176, 29);
-            this.VisualizarRelatórioToolStripMenuItem.Text = "Visualizar Relatório";
+            this.VisualizarRelatórioToolStripMenuItem.Size = new System.Drawing.Size(154, 29);
+            this.VisualizarRelatórioToolStripMenuItem.Text = "Relatório Inteiro";
             this.VisualizarRelatórioToolStripMenuItem.Click += new System.EventHandler(this.VisualizarRelatórioToolStripMenuItem_Click);
             // 
             // visualizarRelatórioAgrupadoToolStripMenuItem
             // 
             this.visualizarRelatórioAgrupadoToolStripMenuItem.Name = "visualizarRelatórioAgrupadoToolStripMenuItem";
-            this.visualizarRelatórioAgrupadoToolStripMenuItem.Size = new System.Drawing.Size(262, 29);
-            this.visualizarRelatórioAgrupadoToolStripMenuItem.Text = "Visualizar Relatório Agrupado";
+            this.visualizarRelatórioAgrupadoToolStripMenuItem.Size = new System.Drawing.Size(184, 29);
+            this.visualizarRelatórioAgrupadoToolStripMenuItem.Text = "Relatório Agrupado";
             // 
             // vilualizarRelatórioComFiltrosToolStripMenuItem
             // 
             this.vilualizarRelatórioComFiltrosToolStripMenuItem.Name = "vilualizarRelatórioComFiltrosToolStripMenuItem";
-            this.vilualizarRelatórioComFiltrosToolStripMenuItem.Size = new System.Drawing.Size(265, 29);
-            this.vilualizarRelatórioComFiltrosToolStripMenuItem.Text = "Vilualizar Relatório com Filtros";
+            this.vilualizarRelatórioComFiltrosToolStripMenuItem.Size = new System.Drawing.Size(191, 29);
+            this.vilualizarRelatórioComFiltrosToolStripMenuItem.Text = "Relatório com Filtros";
             this.vilualizarRelatórioComFiltrosToolStripMenuItem.Click += new System.EventHandler(this.vilualizarRelatórioComFiltrosToolStripMenuItem_Click);
+            // 
+            // relatórioFiltradoPorPopupToolStripMenuItem
+            // 
+            this.relatórioFiltradoPorPopupToolStripMenuItem.Name = "relatórioFiltradoPorPopupToolStripMenuItem";
+            this.relatórioFiltradoPorPopupToolStripMenuItem.Size = new System.Drawing.Size(260, 29);
+            this.relatórioFiltradoPorPopupToolStripMenuItem.Text = "Relatório Filtrado por Pop-up";
+            this.relatórioFiltradoPorPopupToolStripMenuItem.Click += new System.EventHandler(this.relatórioFiltradoPorPopupToolStripMenuItem_Click);
             // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(804, 450);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
@@ -93,5 +102,6 @@ namespace Projeto_Relatório
         private System.Windows.Forms.ToolStripMenuItem VisualizarRelatórioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem visualizarRelatórioAgrupadoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vilualizarRelatórioComFiltrosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem relatórioFiltradoPorPopupToolStripMenuItem;
     }
 }

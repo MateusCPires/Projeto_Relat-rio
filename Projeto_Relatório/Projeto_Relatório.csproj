@@ -69,6 +69,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet_Series.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Formulários\frmInformaParametros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frmInformaParametros.Designer.cs">
+      <DependentUpon>frmInformaParametros.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formulários\frmVisualizaSeries.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formulários\frmInformaParametros.resx">
+      <DependentUpon>frmInformaParametros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formulários\frmVisualizaSeries.resx">
       <DependentUpon>frmVisualizaSeries.cs</DependentUpon>
     </EmbeddedResource>

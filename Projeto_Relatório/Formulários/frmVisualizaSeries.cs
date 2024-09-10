@@ -12,6 +12,7 @@ namespace Projeto_Relatório
 {
     public partial class frmVisualizaSeries : Form
     {
+        public string pClassificacao;
         public frmVisualizaSeries()
         {
             InitializeComponent();
@@ -27,7 +28,17 @@ namespace Projeto_Relatório
 
         private void reportViewer1_Load(object sender, EventArgs e)
         {
+            this.seriesTableAdapter.Fill(this.dataSet_Series.Series);
+            if(pClassificacao == (string)null)
+            {
+                this.reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("ClassificacaoEtaria", pClassificacao));
+            }
+            else
+            {
 
+                this.reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("ClassificacaoEtaria", (string)null));
+            }
+            this.reportViewer1.RefreshReport();
         }
     }
 }
