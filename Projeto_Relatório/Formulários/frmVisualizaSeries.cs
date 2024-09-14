@@ -31,12 +31,12 @@ namespace Projeto_Relatório
             this.seriesTableAdapter.Fill(this.dataSet_Series.Series);
             if(pClassificacao == (string)null)
             {
-                this.reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("ClassificacaoEtaria", pClassificacao));
+                this.reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("ClassificacaoEtaria", (string)null));
             }
             else
             {
 
-                this.reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("ClassificacaoEtaria", (string)null));
+                this.reportViewer1.LocalReport.SetParameters(new Microsoft.Reporting.WinForms.ReportParameter("ClassificacaoEtaria", pClassificacao));
             }
             this.reportViewer1.RefreshReport();
         }

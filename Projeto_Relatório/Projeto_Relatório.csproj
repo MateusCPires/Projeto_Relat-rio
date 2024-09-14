@@ -132,9 +132,9 @@
       <DependentUpon>DataSet_Series.xsd</DependentUpon>
     </None>
     <None Include="Dados\DataSet_Series.xsd">
-      <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataSet_Series.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </None>
     <None Include="Dados\DataSet_Series.xss">
       <DependentUpon>DataSet_Series.xsd</DependentUpon>

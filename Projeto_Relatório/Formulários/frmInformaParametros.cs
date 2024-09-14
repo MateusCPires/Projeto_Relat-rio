@@ -34,6 +34,7 @@ namespace Projeto_Relatório.Formulários
             frmVisualizaSeries objVisualizaSeries = new frmVisualizaSeries();
             objVisualizaSeries.pClassificacao = cmbClassificacao.Text;
             objVisualizaSeries.Show();
+            Close();
         }
 
         private void btnTodos_Click(object sender, EventArgs e)
@@ -41,6 +42,7 @@ namespace Projeto_Relatório.Formulários
             frmVisualizaSeries objVisualizaSeries = new frmVisualizaSeries();
             objVisualizaSeries.pClassificacao = (string)null;
             objVisualizaSeries.Show();
+            Close();
         }
     }
 }

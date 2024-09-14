@@ -39,7 +39,6 @@ namespace Projeto_Relatório
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.VisualizarRelatórioToolStripMenuItem,
@@ -48,47 +47,50 @@ namespace Projeto_Relatório
             this.relatórioFiltradoPorPopupToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(804, 33);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
+            this.menuStrip1.Size = new System.Drawing.Size(536, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // VisualizarRelatórioToolStripMenuItem
             // 
             this.VisualizarRelatórioToolStripMenuItem.Name = "VisualizarRelatórioToolStripMenuItem";
-            this.VisualizarRelatórioToolStripMenuItem.Size = new System.Drawing.Size(154, 29);
+            this.VisualizarRelatórioToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
             this.VisualizarRelatórioToolStripMenuItem.Text = "Relatório Inteiro";
             this.VisualizarRelatórioToolStripMenuItem.Click += new System.EventHandler(this.VisualizarRelatórioToolStripMenuItem_Click);
             // 
             // visualizarRelatórioAgrupadoToolStripMenuItem
             // 
             this.visualizarRelatórioAgrupadoToolStripMenuItem.Name = "visualizarRelatórioAgrupadoToolStripMenuItem";
-            this.visualizarRelatórioAgrupadoToolStripMenuItem.Size = new System.Drawing.Size(184, 29);
+            this.visualizarRelatórioAgrupadoToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.visualizarRelatórioAgrupadoToolStripMenuItem.Text = "Relatório Agrupado";
             // 
             // vilualizarRelatórioComFiltrosToolStripMenuItem
             // 
             this.vilualizarRelatórioComFiltrosToolStripMenuItem.Name = "vilualizarRelatórioComFiltrosToolStripMenuItem";
-            this.vilualizarRelatórioComFiltrosToolStripMenuItem.Size = new System.Drawing.Size(191, 29);
+            this.vilualizarRelatórioComFiltrosToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.vilualizarRelatórioComFiltrosToolStripMenuItem.Text = "Relatório com Filtros";
             this.vilualizarRelatórioComFiltrosToolStripMenuItem.Click += new System.EventHandler(this.vilualizarRelatórioComFiltrosToolStripMenuItem_Click);
             // 
             // relatórioFiltradoPorPopupToolStripMenuItem
             // 
             this.relatórioFiltradoPorPopupToolStripMenuItem.Name = "relatórioFiltradoPorPopupToolStripMenuItem";
-            this.relatórioFiltradoPorPopupToolStripMenuItem.Size = new System.Drawing.Size(260, 29);
+            this.relatórioFiltradoPorPopupToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.relatórioFiltradoPorPopupToolStripMenuItem.Text = "Relatório Filtrado por Pop-up";
             this.relatórioFiltradoPorPopupToolStripMenuItem.Click += new System.EventHandler(this.relatórioFiltradoPorPopupToolStripMenuItem_Click);
             // 
             // frmMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(804, 450);
+            this.ClientSize = new System.Drawing.Size(536, 292);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmMenu";
             this.Text = "frmMenu";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

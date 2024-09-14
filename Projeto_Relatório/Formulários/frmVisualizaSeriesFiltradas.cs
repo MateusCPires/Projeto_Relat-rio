@@ -31,7 +31,7 @@ namespace Projeto_Relatório.Formulários
         {
             try
             {
-                this.classificacaoEtaria_SeriesTableAdapter.FillBy(this.dataSet_Series.ClassificacaoEtaria_Series);
+                this.classificacaoEtaria_SeriesTableAdapter.Fill(this.dataSet_Series.ClassificacaoEtaria_Series);
             }
             catch (System.Exception ex)
             {
