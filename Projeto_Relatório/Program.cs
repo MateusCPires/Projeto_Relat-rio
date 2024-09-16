@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projeto_Relatório.Formulários;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace Projeto_Relatório
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMenu());
+            Application.Run(new frmSplashScreen());
         }
     }
 }

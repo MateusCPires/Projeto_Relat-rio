@@ -75,6 +75,12 @@
     <Compile Include="Formulários\frmInformaParametros.Designer.cs">
       <DependentUpon>frmInformaParametros.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formulários\frmSplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frmSplashScreen.Designer.cs">
+      <DependentUpon>frmSplashScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formulários\frmVisualizaSeries.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,16 +99,19 @@
     <Compile Include="Formulários\frmVisualizaSeriesFiltradas.Designer.cs">
       <DependentUpon>frmVisualizaSeriesFiltradas.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMenu.cs">
+    <Compile Include="Formulários\frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMenu.Designer.cs">
+    <Compile Include="Formulários\frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formulários\frmInformaParametros.resx">
       <DependentUpon>frmInformaParametros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frmSplashScreen.resx">
+      <DependentUpon>frmSplashScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formulários\frmVisualizaSeries.resx">
       <DependentUpon>frmVisualizaSeries.cs</DependentUpon>
@@ -113,7 +122,7 @@
     <EmbeddedResource Include="Formulários\frmVisualizaSeriesFiltradas.resx">
       <DependentUpon>frmVisualizaSeriesFiltradas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMenu.resx">
+    <EmbeddedResource Include="Formulários\frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -124,6 +133,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Relatórios\Relatorio_Series.rdlc" />
     <EmbeddedResource Include="Relatórios\Relatorio_Series_Agrupado.rdlc" />
@@ -152,6 +162,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fgpu17hWQAUmJ5n.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
