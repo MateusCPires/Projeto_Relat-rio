@@ -41,5 +41,11 @@ namespace Projeto_Relatório
             frmInformaParametros objInformaParametros = new frmInformaParametros();
             objInformaParametros.Show();
         }
+
+        private void frmMenu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            frmSplashScreen objSplashScreen = new frmSplashScreen();
+            objSplashScreen.Close();
+        }
     }
 }

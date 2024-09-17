@@ -22,9 +22,9 @@ namespace Projeto_Relatório.Formulários
         {
             if (Efect)
             {
-                this.Opacity -= 0.01D;
+                progressBar1.Value += 10;
             }
-            if(this.Opacity == 0)
+            if(progressBar1.Value == 100)
             {
                 Efect = false;
 
