@@ -75,6 +75,12 @@
     <Compile Include="Formulários\frmInformaParametros.Designer.cs">
       <DependentUpon>frmInformaParametros.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formulários\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formulários\frmSplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formulários\frmInformaParametros.resx">
       <DependentUpon>frmInformaParametros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formulários\frmSplashScreen.resx">
       <DependentUpon>frmSplashScreen.cs</DependentUpon>
