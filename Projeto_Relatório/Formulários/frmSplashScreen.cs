@@ -22,15 +22,15 @@ namespace Projeto_Relatório.Formulários
         {
             if (Efect)
             {
-                this.Opacity -= 0.01D;
+                progressBar1.Value += 10;
             }
-            if(this.Opacity == 0)
+            if(progressBar1.Value == 100)
             {
                 Efect = false;
 
                 SplashTimer.Enabled = false;
-                frmMenu objMenu = new frmMenu();
-                objMenu.Show();
+                frmLogin objLogin = new frmLogin();
+                objLogin.Show();
                 this.Hide();
             }
         }
@@ -39,7 +39,6 @@ namespace Projeto_Relatório.Formulários
             SplashTimer.Interval = 190;
             SplashTimer.Tick += new EventHandler(SplashTimer_Tick);
             SplashTimer.Enabled = true;
-            this.Opacity = 1;
         }
     }
 }

@@ -152,7 +152,6 @@
     </None>
     <None Include="Dados\DataSet_Series.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet_Series.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
     <None Include="Dados\DataSet_Series.xss">

@@ -39,13 +39,14 @@ namespace Projeto_Relatório.Formulários
             {
                 errErro.SetError(txtSenha, "");
             }
+            return true;
         }
 
         private void btnOK_Click(object sender, EventArgs e)
         {
             if (CaixasOK())
             {
-                if(txtNomeUsuario.Text!="Eu" && txtSenha != "123")
+                if(txtNomeUsuario.Text!="Eu" && txtSenha.Text != "123")
                 {
                     MessageBox.Show("Usuário ou senha inválidos");
                     Erros++;
