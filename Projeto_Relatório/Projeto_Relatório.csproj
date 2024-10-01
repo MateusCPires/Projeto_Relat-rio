@@ -174,5 +174,8 @@
   <ItemGroup>
     <None Include="Resources\Fgpu17hWQAUmJ5n.jpeg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\locker.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

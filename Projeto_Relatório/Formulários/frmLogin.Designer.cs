@@ -67,14 +67,14 @@ namespace Projeto_Relatório.Formulários
             this.txtSenha.Location = new System.Drawing.Point(421, 174);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(365, 26);
-            this.txtSenha.TabIndex = 2;
+            this.txtSenha.TabIndex = 3;
             // 
             // txtNomeUsuario
             // 
             this.txtNomeUsuario.Location = new System.Drawing.Point(421, 85);
             this.txtNomeUsuario.Name = "txtNomeUsuario";
             this.txtNomeUsuario.Size = new System.Drawing.Size(365, 26);
-            this.txtNomeUsuario.TabIndex = 3;
+            this.txtNomeUsuario.TabIndex = 2;
             // 
             // btnOK
             // 
@@ -100,9 +100,11 @@ namespace Projeto_Relatório.Formulários
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = global::Projeto_Relatório.Properties.Resources.locker;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(395, 426);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 

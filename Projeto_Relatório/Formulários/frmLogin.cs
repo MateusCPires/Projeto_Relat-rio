@@ -44,7 +44,7 @@ namespace Projeto_Relatório.Formulários
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            if (CaixasOK())
+            if (!CaixasOK())
             {
                 if(txtNomeUsuario.Text!="Eu" && txtSenha.Text != "123")
                 {
@@ -53,7 +53,7 @@ namespace Projeto_Relatório.Formulários
                     if (Erros == 3)
                     {
                         MessageBox.Show("Número máximo de tentativas gasto");
-                        this.Close();
+                        Application.ExitThread();
                     }
                 }
             }
