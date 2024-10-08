@@ -64,10 +64,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dados\DataSet_Series.cs">
+      <DependentUpon>DataSet_Series.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dados\DataSet_Series.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet_Series.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dados\DataSet_Series1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Series.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frmCadVendas .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frmCadVendas .Designer.cs">
+      <DependentUpon>frmCadVendas .cs</DependentUpon>
     </Compile>
     <Compile Include="Formulários\frmInformaParametros.cs">
       <SubType>Form</SubType>
@@ -113,6 +127,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formulários\frmCadVendas .resx">
+      <DependentUpon>frmCadVendas .cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formulários\frmInformaParametros.resx">
       <DependentUpon>frmInformaParametros.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,6 +170,7 @@
     <None Include="Dados\DataSet_Series.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>DataSet_Series1.Designer.cs</LastGenOutput>
     </None>
     <None Include="Dados\DataSet_Series.xss">
       <DependentUpon>DataSet_Series.xsd</DependentUpon>
