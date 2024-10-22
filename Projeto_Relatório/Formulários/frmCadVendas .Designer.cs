@@ -31,7 +31,7 @@ namespace Projeto_Relatório.Formulários
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -48,17 +48,17 @@ namespace Projeto_Relatório.Formulários
             this.btnNovo = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnAdicionarItem = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -68,7 +68,7 @@ namespace Projeto_Relatório.Formulários
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnCancelar);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.label5);
@@ -92,14 +92,14 @@ namespace Projeto_Relatório.Formulários
             this.dateTimePicker1.Size = new System.Drawing.Size(137, 32);
             this.dateTimePicker1.TabIndex = 18;
             // 
-            // button1
+            // btnCancelar
             // 
-            this.button1.Location = new System.Drawing.Point(651, 89);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(137, 32);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Cancelar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCancelar.Location = new System.Drawing.Point(651, 89);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(137, 32);
+            this.btnCancelar.TabIndex = 16;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -166,7 +166,7 @@ namespace Projeto_Relatório.Formulários
             this.groupBox2.Controls.Add(this.btnNovo);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.button3);
+            this.groupBox2.Controls.Add(this.btnAdicionarItem);
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.textBox4);
@@ -270,14 +270,15 @@ namespace Projeto_Relatório.Formulários
             this.button4.Text = "Remover Item";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnAdicionarItem
             // 
-            this.button3.Location = new System.Drawing.Point(666, 125);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(109, 62);
-            this.button3.TabIndex = 19;
-            this.button3.Text = "Adicionar Item";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnAdicionarItem.Location = new System.Drawing.Point(666, 125);
+            this.btnAdicionarItem.Name = "btnAdicionarItem";
+            this.btnAdicionarItem.Size = new System.Drawing.Size(109, 62);
+            this.btnAdicionarItem.TabIndex = 19;
+            this.btnAdicionarItem.Text = "Adicionar Item";
+            this.btnAdicionarItem.UseVisualStyleBackColor = true;
+            this.btnAdicionarItem.Click += new System.EventHandler(this.btnAdicionarItem_Click);
             // 
             // dataGridView1
             // 
@@ -335,6 +336,14 @@ namespace Projeto_Relatório.Formulários
             this.button2.Text = "Buscar";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Location = new System.Drawing.Point(6, 78);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(93, 32);
+            this.txtCodigo.TabIndex = 19;
+            this.txtCodigo.Leave += new System.EventHandler(this.txtCodigo_Leave);
+            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(414, 78);
@@ -362,14 +371,6 @@ namespace Projeto_Relatório.Formulários
             this.label3.TabIndex = 8;
             this.label3.Text = "Quantidade";
             // 
-            // txtCodigo
-            // 
-            this.txtCodigo.Location = new System.Drawing.Point(6, 78);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(93, 32);
-            this.txtCodigo.TabIndex = 19;
-            this.txtCodigo.Leave += new System.EventHandler(this.txtCodigo_Leave);
-            // 
             // frmCadVendas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -393,7 +394,7 @@ namespace Projeto_Relatório.Formulários
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label5;
@@ -420,7 +421,7 @@ namespace Projeto_Relatório.Formulários
         private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnAdicionarItem;
         private System.Windows.Forms.TextBox txtCodigo;
     }
 }
