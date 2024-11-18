@@ -62,8 +62,29 @@ namespace Projeto_Relatório.Formulários
                 decimal.Parse(txtValorUnit.Text), Usuario);
             Limpa_Campos_Item();
             CarregaGridItens();
-            TotalDoPedido = TotalDoPedido + ValorTotalProduto;
+            vTotalDoPedido = vTotalDoPedido + vValorTotalProduto;
             lblTotaldoPedido.Text = (TotalDoPedido).ToString("###,##0.00");
+        }
+
+        private void txtQuantidade_Leave(object sender, EventArgs e)
+        {
+            if (txtQuantidade.Text == "") txtQuantidade.Text = "1";
+            vQuantidadeDigitada = Convert.ToInt16(txtQuantidade.Text);
+            if (vQuantidadeDigitada > vSaldoAtual)
+            {
+                MessageBox.Show("Saldo insuficiente, só existem" + vSaldoAtual.ToString() + "disponível");
+                txtQuantidade.Focus();
+                txtQuantidade.SelectAll();
+            }
+        }
+
+        private void txtValorUnit_Leave(object sender, EventArgs e)
+        {
+            VValorUnitDigitado = Convert.ToDouble(txtValorUnit.Text);
+            vValorTotalProduto = vQuantidadeDigitada * valorUnitDigitado;
+            // lblTotalProduto.Text = (vValorTotalProduto).ToString("###,##0.00");
+            lblTotalProduto.Text = (vValorTotalProduto).ToString("c");
+            btnAdicionarItem.Focus();
         }
     }
 }
