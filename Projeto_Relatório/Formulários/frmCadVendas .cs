@@ -33,7 +33,7 @@ namespace Projeto_Relatório.Formulários
                 {
                     lblDescricaoProduto.Text = dtProduto.Rows[@]["pro_Descricao"].ToString();
                     txtValorUnit.Text = dtProduto.Rows[0]["pro_valor"].ToString();
-                    vSaldoAtual = (int)dtProduto.Rows[0]["pro_QtdeEstoque"];
+                    SaldoAtual = (int)dtProduto.Rows[0]["pro_QtdeEstoque"];
                     txtQuantidade.Focus();
                 }
             }
@@ -44,8 +44,8 @@ namespace Projeto_Relatório.Formulários
             btnCancelar_Click(sender, e);
             CarregaGridItens();
             PedidoTableAdapter tapedido = new PedidoTableAdapter();
-            vld_VendaAtual = (int)taPedido.UltimoPedido() + 1;
-            lblNumeroPedido.Text = vld_VendaAtual.ToString();
+            Id_VendaAtual = (int)taPedido.UltimoPedido() + 1;
+            lblNumeroPedido.Text = Id_VendaAtual.ToString();
             grbpedido.Enabled = true;
             grbItem.Enabled = true;
             btnGravarVenda.Enabled = true;
@@ -57,22 +57,22 @@ namespace Projeto_Relatório.Formulários
         private void btnAdicionarItem_Click(object sender, EventArgs e)
         {
             Item_TempTableAdapter taItemTemp = new Item_TempTableAdapter();
-            taItemTemp.Insert(vld_VendaAtual, int.Parse(txtCodigo.Text),
+            taItemTemp.Insert(Id_VendaAtual, int.Parse(txtCodigo.Text),
                 lblDescricaoProduto.Text, int.Parse(txtQuantidade.Text),
                 decimal.Parse(txtValorUnit.Text), Usuario);
             Limpa_Campos_Item();
             CarregaGridItens();
-            vTotalDoPedido = vTotalDoPedido + vValorTotalProduto;
+            TotalDoPedido = TotalDoPedido + ValorTotalProduto;
             lblTotaldoPedido.Text = (TotalDoPedido).ToString("###,##0.00");
         }
 
         private void txtQuantidade_Leave(object sender, EventArgs e)
         {
             if (txtQuantidade.Text == "") txtQuantidade.Text = "1";
-            vQuantidadeDigitada = Convert.ToInt16(txtQuantidade.Text);
-            if (vQuantidadeDigitada > vSaldoAtual)
+            QuantidadeDigitada = Convert.ToInt16(txtQuantidade.Text);
+            if (QuantidadeDigitada > SaldoAtual)
             {
-                MessageBox.Show("Saldo insuficiente, só existem" + vSaldoAtual.ToString() + "disponível");
+                MessageBox.Show("Saldo insuficiente, só existem" + SaldoAtual.ToString() + "disponível");
                 txtQuantidade.Focus();
                 txtQuantidade.SelectAll();
             }
@@ -80,11 +80,54 @@ namespace Projeto_Relatório.Formulários
 
         private void txtValorUnit_Leave(object sender, EventArgs e)
         {
-            VValorUnitDigitado = Convert.ToDouble(txtValorUnit.Text);
-            vValorTotalProduto = vQuantidadeDigitada * valorUnitDigitado;
-            // lblTotalProduto.Text = (vValorTotalProduto).ToString("###,##0.00");
-            lblTotalProduto.Text = (vValorTotalProduto).ToString("c");
+            ValorUnitDigitado = Convert.ToDouble(txtValorUnit.Text);
+            ValorTotalProduto = QuantidadeDigitada * ValorUnitDigitado;
+            // lblTotalProduto.Text = (ValorTotalProduto).ToString("###,##0.00");
+            lblTotaldoPedido.Text = (ValorTotalProduto).ToString("c");
             btnAdicionarItem.Focus();
         }
-    }
+
+
+        private void btnGravarVenda_Click(object sender, EventArgs e)
+        {
+            if (cmbCliente.SelectedIndex == -1
+            {
+                errErro.SetError(cmbCliente, "Selecione um Cliente");
+                return;
+            }
+            else
+            {
+                errErro.SetError(cmbCliente, "");
+            }
+            PedidoTableAdapter taPedido = new PedidoTableAdapter();
+            taPedido.Insert(int.Parse(cmbCliente.SelectedValue.ToString()),
+                dtpDataVenda.Value, decimal.Parse(TotalDoPedido.ToString()), "V", txtObservacao.Text);
+            Id_VendaAtual = (int)taPedido.UltimoPedido();
+
+            ItemTableAdapter taItem = new ItemTableAdapter();
+            ProdutoTableAdapter taProduto = new ProdutoTableAdapter();
+            int CodigoProduto, QtdVendida;
+            decimal ValorUnit;
+            for (int i = 0; i < dgvItem.RowCount; i++)
+            {
+                CodigoProduto = (int)dgvItem.Rows[i].Cells["Codigo"].Value;
+                QtdVendida = (int)dgvItem.Rows[i].Cells["Quantidade"].Value;
+                ValorUnit = (decimal)dgvItem.Rows[i].Cells["ValorUnit"].Value;
+
+                taItem.Insert(Id_VendaAtual, CodigoProduto, QtdVendida, ValorUnit);
+
+                taProduto.Acerta_Saldo_Saida(CodigoProduto, QtdVendida);
+            }
+            MessageBox.Show("Venda gravada com sucesso!");
+            Limpa_Campos_Pedido();
+
+            Item_TempTableAdapter taItem_Temp = new Item_TempTableAdapter();
+            taItem_Temp.Limpa_Itens(Id_VendaAtual, Usuario);
+            CarregaGridItens();
+            grbPedido.Enabled = false;
+            grbItem.Enabled = false;
+            btnGravarVenda.Enabled = false;
+            btnNovo.Enabled = true;
+            btnCancelar.Enabled = false;
+        }
 }
